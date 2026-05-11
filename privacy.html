@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — ProductivityWheel</title>
+  <meta name="description" content="ProductivityWheel Privacy Policy. Learn how we protect your data with our zero-network, 100% local architecture." />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/images/logo.png" alt="ProductivityWheel Logo" />
+        <span>ProductivityWheel</span>
+      </a>
+      <ul class="navbar__links" id="nav-links">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#privacy">Privacy</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+      <div class="navbar__cta">
+        <a href="index.html#pricing" class="btn btn--outline btn--sm">Get PRO</a>
+        <a href="index.html#download" class="btn btn--primary btn--sm">Download Free</a>
+      </div>
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ====== LEGAL PAGE ====== -->
+  <main class="legal-page">
+    <div class="container">
+
+      <div class="legal-page__header animate-on-scroll">
+        <span class="section-label">Legal</span>
+        <h1 class="section-title">Privacy Policy</h1>
+        <p class="legal-page__meta">Last updated: May 11, 2026</p>
+      </div>
+
+      <article class="legal-page__body animate-on-scroll">
+
+        <section>
+          <h2>1. Introduction</h2>
+          <p>Welcome to ProductivityWheel ("we", "our", "us"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard information when you use our desktop application and website.</p>
+          <p>ProductivityWheel is built on a <strong>privacy-first, zero-network architecture</strong>. The application operates 100% locally on your device after a one-time license activation (PRO users only). We do not collect, transmit, or store any personal data on remote servers during normal use.</p>
+        </section>
+
+        <section>
+          <h2>2. Information We Do NOT Collect</h2>
+          <p>Unlike many productivity tools, ProductivityWheel is explicitly designed to <strong>never</strong> collect the following:</p>
+          <ul>
+            <li><strong>Keystroke content</strong> — We count keystrokes per minute for rhythm detection but never record which keys you press.</li>
+            <li><strong>Screenshots or screen content</strong> — We never capture, store, or transmit any visual representation of your screen.</li>
+            <li><strong>Application usage data</strong> — We do not track which applications, websites, or documents you use.</li>
+            <li><strong>Mouse click targets</strong> — We track mouse velocity and click frequency, not where you click.</li>
+            <li><strong>Personal files or documents</strong> — We have no access to your file system beyond our own data directory.</li>
+            <li><strong>Browsing history</strong> — We have no visibility into your web activity.</li>
+            <li><strong>Analytics or telemetry</strong> — No usage analytics, crash reports, or behavioral data is transmitted anywhere.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. Information Stored Locally</h2>
+          <p>ProductivityWheel stores the following data <strong>exclusively on your local device</strong> in an encrypted SQLite database within your operating system's application data directory:</p>
+          <ul>
+            <li><strong>User Settings</strong> — Your preferences (wheel size, opacity, work mode, volume, auto-start preference).</li>
+            <li><strong>Session History</strong> — Focus scores and session timestamps for the session history feature (PRO only).</li>
+            <li><strong>License Information</strong> — Your encrypted activation token and device-bound proof, stored using AES-256-CBC encryption with scrypt key derivation.</li>
+            <li><strong>Focus Metrics</strong> — Aggregated, anonymized metrics (velocity averages, keyboard rate, idle durations) used to compute your Focus Score. Raw input events are processed in memory and immediately discarded.</li>
+          </ul>
+          <p>You can delete all locally stored data at any time by uninstalling the application or deleting the app data directory.</p>
+        </section>
+
+        <section>
+          <h2>4. One-Time License Activation (PRO Users Only)</h2>
+          <p>The <strong>only network communication</strong> ProductivityWheel ever performs is a single HTTPS request during PRO license activation. During this process:</p>
+          <ul>
+            <li>Your license key (format: <code>PW-XXXX-XXXX-XXXX-XXXX</code>) is sent to our activation server.</li>
+            <li>An <strong>anonymized device fingerprint</strong> is sent — this is a one-way SHA-256 hash of hardware identifiers (CPU ID, disk serial, network adapter) combined with a random salt. It cannot be reversed to identify your hardware.</li>
+            <li>No personal information, username, email, IP address logging, or any other identifying data is transmitted.</li>
+          </ul>
+          <p>After successful activation, the app stores an encrypted activation token locally and <strong>never contacts any server again</strong>. The application works fully offline forever after activation.</p>
+        </section>
+
+        <section>
+          <h2>5. Device Fingerprinting</h2>
+          <p>To prevent license key sharing and piracy, we generate an anonymized device fingerprint during activation:</p>
+          <ul>
+            <li>The fingerprint is a <strong>salted SHA-256 hash</strong> — a one-way mathematical transformation that cannot be reversed.</li>
+            <li>It is used solely to verify that a license key is activated on the authorized device.</li>
+            <li>We do not store raw hardware identifiers on our servers — only the hash.</li>
+            <li>If you change major hardware components, you may need to re-activate. Contact support for assistance.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>6. Website</h2>
+          <p>Our website (<a href="https://productivitywheel.com">productivitywheel.com</a>) may use:</p>
+          <ul>
+            <li><strong>Essential cookies</strong> — Required for basic website functionality and purchase flow.</li>
+            <li><strong>Payment processing</strong> — If you purchase a PRO license, payment is handled by a third-party payment processor. We do not store credit card numbers or financial details. Please refer to the payment processor's privacy policy.</li>
+          </ul>
+          <p>We do not use advertising cookies, tracking pixels, or third-party analytics on our website.</p>
+        </section>
+
+        <section>
+          <h2>7. Data Security</h2>
+          <p>We take data security seriously:</p>
+          <ul>
+            <li><strong>Local encryption</strong> — License data is encrypted with AES-256-CBC and scrypt-derived keys.</li>
+            <li><strong>Secure communication</strong> — The one-time activation uses HTTPS with TLS 1.3.</li>
+            <li><strong>Sandboxed process</strong> — The application runs with minimal OS permissions through Electron's security sandbox and context isolation.</li>
+            <li><strong>No remote storage</strong> — Since your data never leaves your device, it cannot be compromised in a server breach.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>8. Children's Privacy</h2>
+          <p>ProductivityWheel is not directed at children under the age of 13. We do not knowingly collect any information from children. Since the application collects no personal data during use, there is no risk of inadvertent collection from minors.</p>
+        </section>
+
+        <section>
+          <h2>9. Your Rights</h2>
+          <p>Because ProductivityWheel stores data exclusively on your device, you have complete control:</p>
+          <ul>
+            <li><strong>Access</strong> — All your data is on your machine in the app data directory.</li>
+            <li><strong>Deletion</strong> — Uninstall the app or delete the data directory to remove all data.</li>
+            <li><strong>Portability</strong> — Your local database can be backed up or moved as you wish.</li>
+            <li><strong>Opt-out</strong> — There is nothing to opt out of — we don't collect data.</li>
+          </ul>
+          <p>For EU/EEA residents: Since we do not process personal data on our servers (beyond the one-time anonymized activation hash), GDPR obligations related to data processing are minimal. You may still contact us to exercise any rights you believe apply.</p>
+        </section>
+
+        <section>
+          <h2>10. Third-Party Services</h2>
+          <p>ProductivityWheel does not integrate with, send data to, or receive data from any third-party services during normal use. The only third-party involvement is:</p>
+          <ul>
+            <li><strong>Payment processor</strong> — For PRO license purchases on our website (not within the app).</li>
+            <li><strong>Activation server</strong> — Our own server for the one-time license validation.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>11. Changes to This Policy</h2>
+          <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. We encourage you to review this policy periodically. Continued use of the application after changes constitutes acceptance of the updated policy.</p>
+        </section>
+
+        <section>
+          <h2>12. Contact Us</h2>
+          <p>If you have questions or concerns about this Privacy Policy, please contact us:</p>
+          <ul>
+            <!-- PLACEHOLDER: Replace with real contact info -->
+            <li><strong>Email</strong>: <a href="mailto:privacy@productivitywheel.com">privacy@productivitywheel.com</a></li>
+            <li><strong>Website</strong>: <a href="https://productivitywheel.com/contact">productivitywheel.com/contact</a></li>
+          </ul>
+        </section>
+
+      </article>
+
+    </div>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__brand">
+        <img src="assets/images/logo.png" alt="ProductivityWheel" />
+        <span>ProductivityWheel</span>
+      </div>
+      <p class="footer__copy">&copy; 2026 ProductivityWheel. All rights reserved.</p>
+      <ul class="footer__links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

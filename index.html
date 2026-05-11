@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProductivityWheel — Your Personal Focus Momentum Tracker</title>
+  <meta name="description" content="ProductivityWheel tracks your mouse and keyboard patterns in real-time and visualizes your focus as a beautiful spinning wheel. 100% local. Zero telemetry. Pure motivation." />
+  <meta name="keywords" content="productivity, focus tracker, mouse tracking, gamification, desktop app, privacy" />
+  <meta property="og:title" content="ProductivityWheel — Your Personal Focus Momentum Tracker" />
+  <meta property="og:description" content="A gamified focus coach that runs 100% locally on your machine. No cloud. No telemetry. Just motivation." />
+  <meta property="og:image" content="assets/images/screenshot.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="navbar__logo">
+        <img src="assets/images/logo.png" alt="ProductivityWheel Logo" />
+        <span>ProductivityWheel</span>
+      </a>
+      <ul class="navbar__links" id="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="navbar__cta">
+        <a href="#pricing" class="btn btn--outline btn--sm">Get PRO</a>
+        <a href="#download" class="btn btn--primary btn--sm">Download Free</a>
+      </div>
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="badge badge--blue">🚀 Now Available for Windows, macOS & Linux</span>
+        </div>
+        <h1 class="hero__title">
+          See Your <span>Focus</span> in Real&nbsp;Time
+        </h1>
+        <p class="hero__subtitle">
+          ProductivityWheel tracks your mouse &amp; keyboard patterns and visualizes your focus as a beautiful spinning wheel. Focused work makes it glow. Drifting? It slows down. Your always-visible momentum coach.
+        </p>
+        <div class="hero__actions">
+          <a href="#download" class="btn btn--primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Free
+          </a>
+          <a href="#how-it-works" class="btn btn--outline">Learn More</a>
+        </div>
+        <div class="hero__stats">
+          <div>
+            <div class="hero__stat-value" data-count="100" data-suffix="%">0%</div>
+            <div class="hero__stat-label">Local & Private</div>
+          </div>
+          <div>
+            <div class="hero__stat-value" data-count="0" data-suffix=" Network Calls">0 Network Calls</div>
+            <div class="hero__stat-label">Zero Telemetry</div>
+          </div>
+          <div>
+            <div class="hero__stat-value" data-count="3" data-suffix=" Platforms">0 Platforms</div>
+            <div class="hero__stat-label">Win · Mac · Linux</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__image-wrapper">
+          <img src="assets/images/screenshot.png" alt="ProductivityWheel running on desktop — a glowing blue spinning wheel overlay showing Focus Score of 87" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FEATURES ====== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features__header animate-on-scroll">
+        <span class="section-label">Features</span>
+        <h2 class="section-title">Everything You Need to Stay Focused</h2>
+        <p class="section-subtitle">A powerful yet simple tool that turns your natural work patterns into visual motivation — no setup, no accounts, no cloud.</p>
+      </div>
+      <div class="features__grid">
+
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-card__icon">🎯</div>
+          <h3 class="feature-card__title">Real-Time Focus Score</h3>
+          <p class="feature-card__desc">Exponential-smoothing algorithm computes a 0–100 score from mouse velocity, keyboard rate, clicks, and consistency. See it live on the wheel.</p>
+        </div>
+
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-card__icon">🌀</div>
+          <h3 class="feature-card__title">Physics-Based Wheel</h3>
+          <p class="feature-card__desc">A spring-damper inertia model makes the wheel spin naturally — accelerating during deep work and gently decelerating when you drift.</p>
+        </div>
+
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-card__icon">🔒</div>
+          <h3 class="feature-card__title">100% Local & Private</h3>
+          <p class="feature-card__desc">Zero network calls. Zero telemetry. All data stays in your local SQLite database. We never see your screen, your keys, or your apps.</p>
+        </div>
+
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-card__icon">⏸️</div>
+          <h3 class="feature-card__title">Smart Auto-Pause</h3>
+          <p class="feature-card__desc">Automatically pauses when your PC sleeps, locks, or you step away. Your score freezes perfectly — no unfair idle penalty.</p>
+        </div>
+
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-card__icon">🔔</div>
+          <h3 class="feature-card__title">Smart Alerts</h3>
+          <p class="feature-card__desc">Visual blink warnings and audio alerts when your focus dips below 20. Configurable per work mode with adjustable volume. <span class="badge badge--pro">PRO</span></p>
+        </div>
+
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-card__icon">⚡</div>
+          <h3 class="feature-card__title">Work Modes</h3>
+          <p class="feature-card__desc">Default, Hardcore, Reading, Creative, and Ultra Hardcore — each with tuned sensitivity and alert thresholds for your workflow. <span class="badge badge--pro">PRO</span></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== HOW IT WORKS ====== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="how-it-works__header animate-on-scroll">
+        <span class="section-label">How It Works</span>
+        <h2 class="section-title">Simple. Automatic. Beautiful.</h2>
+        <p class="section-subtitle">Install, launch, and let ProductivityWheel do the rest. No configuration needed.</p>
+      </div>
+      <div class="steps">
+        <div class="step animate-on-scroll">
+          <div class="step__number">1</div>
+          <h3 class="step__title">Install & Launch</h3>
+          <p class="step__desc">Download the installer for your OS. Launch ProductivityWheel — the wheel appears as a beautiful overlay on your screen.</p>
+        </div>
+        <div class="step animate-on-scroll">
+          <div class="step__number">2</div>
+          <h3 class="step__title">Work Naturally</h3>
+          <p class="step__desc">Just work as you normally do. The app silently tracks mouse and keyboard patterns — never recording what you type or which apps you use.</p>
+        </div>
+        <div class="step animate-on-scroll">
+          <div class="step__number">3</div>
+          <h3 class="step__title">Watch It Spin</h3>
+          <p class="step__desc">The wheel spins faster when you're focused, glowing brilliant blue. Drift or go idle? It slows down and dims. A constant visual nudge.</p>
+        </div>
+        <div class="step animate-on-scroll">
+          <div class="step__number">4</div>
+          <h3 class="step__title">Stay Motivated</h3>
+          <p class="step__desc">Unlock PRO for smart alerts, work modes, and session history. Build momentum and watch your productivity climb.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SCREENSHOT ====== -->
+  <section class="screenshot-section" id="screenshot">
+    <div class="container">
+      <div class="screenshot-section__header animate-on-scroll">
+        <span class="section-label">See It In Action</span>
+        <h2 class="section-title">Your Focus, Visualized</h2>
+        <p class="section-subtitle">The wheel features segmented rings, counter-rotating layers, particle effects, and a glow that intensifies with focused work.</p>
+      </div>
+      <div class="screenshot-section__image animate-on-scroll">
+        <img src="assets/images/screenshot.png" alt="ProductivityWheel desktop application showing the focus wheel overlay with glowing blue rings and a focus score" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PRIVACY ====== -->
+  <section class="privacy" id="privacy">
+    <div class="container">
+      <div class="privacy__content">
+        <span class="section-label">Privacy First</span>
+        <h2 class="section-title">Your Data Never Leaves Your Machine</h2>
+        <p class="section-subtitle">Built with a Zero-Network architecture. No analytics, no tracking, no cloud sync. Ever.</p>
+        <ul class="privacy__list">
+          <li class="privacy__item animate-on-scroll">
+            <span class="privacy__item-icon">🚫</span>
+            <div class="privacy__item-text">
+              <strong>Zero Network Calls</strong>
+              No telemetry, no analytics, no API calls. The app never connects to the internet during use.
+            </div>
+          </li>
+          <li class="privacy__item animate-on-scroll">
+            <span class="privacy__item-icon">💾</span>
+            <div class="privacy__item-text">
+              <strong>Local SQLite Storage</strong>
+              All data stays in your app data directory. Settings, sessions, and license info — all local.
+            </div>
+          </li>
+          <li class="privacy__item animate-on-scroll">
+            <span class="privacy__item-icon">🖥️</span>
+            <div class="privacy__item-text">
+              <strong>No Screenshots or Window Tracking</strong>
+              We never capture your screen or know which applications you're using.
+            </div>
+          </li>
+          <li class="privacy__item animate-on-scroll">
+            <span class="privacy__item-icon">⌨️</span>
+            <div class="privacy__item-text">
+              <strong>Keyboard Anonymity</strong>
+              We count keystrokes per minute for rhythm detection — never record which keys you press.
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="privacy__visual animate-on-scroll">
+        <div class="privacy__badge-large">
+          <span class="icon">🛡️</span>
+          <span class="label">Zero-Network<br>Architecture</span>
+          <span class="sublabel">100% Offline After Activation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PRICING ====== -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="pricing__header animate-on-scroll">
+        <span class="section-label">Pricing</span>
+        <h2 class="section-title">Start Free, Go Pro When Ready</h2>
+        <p class="section-subtitle">The free version is fully functional. PRO unlocks advanced modes, alerts, and session history.</p>
+      </div>
+      <div class="pricing__grid">
+
+        <!-- Free -->
+        <div class="pricing-card animate-on-scroll">
+          <h3 class="pricing-card__name">Free</h3>
+          <div class="pricing-card__price">
+            <span class="amount">$0</span>
+            <span class="period"> / forever</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li><span class="check">✓</span> Real-time spinning wheel overlay</li>
+            <li><span class="check">✓</span> Live Focus Score (0–100)</li>
+            <li><span class="check">✓</span> Mouse + keyboard tracking</li>
+            <li><span class="check">✓</span> Smart auto-pause</li>
+            <li><span class="check">✓</span> System tray integration</li>
+            <li><span class="check">✓</span> Draggable overlay</li>
+            <li><span class="cross">—</span> Work modes</li>
+            <li><span class="cross">—</span> Smart alerts</li>
+            <li><span class="cross">—</span> Session history</li>
+          </ul>
+          <a href="#download" class="btn btn--outline">Download Free</a>
+        </div>
+
+        <!-- PRO -->
+        <div class="pricing-card pricing-card--featured animate-on-scroll">
+          <h3 class="pricing-card__name">PRO</h3>
+          <div class="pricing-card__price">
+            <!-- PLACEHOLDER: Replace with real price -->
+            <span class="amount">$XX</span>
+            <span class="period"> / one-time</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li><span class="check">✓</span> Everything in Free</li>
+            <li><span class="check">✓</span> Hardcore & Ultra Hardcore modes</li>
+            <li><span class="check">✓</span> Reading & Creative modes</li>
+            <li><span class="check">✓</span> Smart visual + audio alerts</li>
+            <li><span class="check">✓</span> Session history & analytics</li>
+            <li><span class="check">✓</span> Advanced customization</li>
+            <li><span class="check">✓</span> Priority support</li>
+            <li><span class="check">✓</span> Lifetime updates</li>
+            <li><span class="check">✓</span> One-time payment, yours forever</li>
+          </ul>
+          <!-- PLACEHOLDER: Replace href with real purchase link -->
+          <a href="#" class="btn btn--primary">Get PRO License</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TESTIMONIALS ====== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="testimonials__header animate-on-scroll">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">What Users Are Saying</h2>
+        <p class="section-subtitle">Join hundreds of professionals who boosted their focus with ProductivityWheel.</p>
+      </div>
+      <div class="testimonials__grid">
+
+        <!-- PLACEHOLDER: Replace with real testimonials -->
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"Placeholder testimonial — replace with a real quote from a user about how ProductivityWheel helped them stay focused during deep work sessions."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">JD</div>
+            <div>
+              <div class="testimonial-card__name">Jane Doe</div>
+              <div class="testimonial-card__role">Software Engineer</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"Placeholder testimonial — replace with a real quote from a user about the privacy-first approach and how the wheel visual kept them accountable."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">AS</div>
+            <div>
+              <div class="testimonial-card__name">Alex Smith</div>
+              <div class="testimonial-card__role">Product Designer</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"Placeholder testimonial — replace with a real quote from a user about Ultra Hardcore mode and how the motivational alerts pushed their productivity."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">MK</div>
+            <div>
+              <div class="testimonial-card__name">Morgan Kim</div>
+              <div class="testimonial-card__role">Freelance Writer</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FAQ ====== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="faq__header animate-on-scroll">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about ProductivityWheel.</p>
+      </div>
+      <div class="faq__list">
+
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>What exactly does ProductivityWheel track?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>ProductivityWheel tracks mouse movement velocity, direction variance, click rates, scroll activity, and keyboard strokes per minute. It never records which keys you press, which apps you use, or captures any screenshots. All tracking is local — nothing is sent anywhere.</p>
+          </div>
+        </div>
+
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Is my data truly private?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Yes. ProductivityWheel uses a Zero-Network architecture. The app makes zero internet connections during normal use. All data is stored locally on your machine in an encrypted SQLite database. The only network call ever made is a one-time license activation (PRO users only).</p>
+          </div>
+        </div>
+
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>How does the Focus Score work?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>The Focus Score (0–100) uses an exponential-smoothing algorithm that weighs mouse velocity (25%), keyboard rate (30%), clicks (15%), scroll (10%), and consistency (20%). It starts at 50, ramps fast during focused work, and decays slowly during idle periods.</p>
+          </div>
+        </div>
+
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>What happens when I pause or lock my computer?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>When paused (via tray or button), or when your PC sleeps or locks, the Focus Score and wheel freeze completely — no decay, no change. On resume, it continues from exactly where you left off with no idle penalty.</p>
+          </div>
+        </div>
+
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>What's the difference between Free and PRO?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>The Free version includes the full spinning wheel overlay, live Focus Score, and auto-pause. PRO unlocks work modes (Hardcore, Ultra Hardcore, Reading, Creative), smart audio/visual alerts, session history, and advanced customization. PRO is a one-time purchase — yours forever.</p>
+          </div>
+        </div>
+
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Which platforms are supported?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>ProductivityWheel is available for Windows, macOS, and Linux. Download the installer for your platform from the download section above.</p>
+          </div>
+        </div>
+
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>How does PRO license activation work?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>After purchasing, you receive a key in the format PW-XXXX-XXXX-XXXX-XXXX. Enter it in Settings → License tab. The app performs a one-time secure activation (HTTPS) and then works fully offline forever. Your key is tied to your device for security.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CTA / DOWNLOAD ====== -->
+  <section class="cta" id="download">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-label">Get Started</span>
+        <h2 class="section-title">Ready to See Your Focus?</h2>
+        <p class="section-subtitle">Download ProductivityWheel for free and start building momentum today. No account needed. No cloud. Just you and your wheel.</p>
+        <div class="cta__actions">
+          <!-- PLACEHOLDER: Replace href with real download links -->
+          <a href="#" class="btn btn--primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Windows (.exe)
+          </a>
+          <a href="#" class="btn btn--outline">
+            macOS (.dmg)
+          </a>
+          <a href="#" class="btn btn--outline">
+            Linux (.AppImage)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__brand">
+        <img src="assets/images/logo.png" alt="ProductivityWheel" />
+        <span>ProductivityWheel</span>
+      </div>
+      <p class="footer__copy">&copy; 2026 ProductivityWheel. All rights reserved.</p>
+      <ul class="footer__links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
