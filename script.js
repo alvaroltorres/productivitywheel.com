@@ -96,12 +96,41 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contact-form');
   const formSuccess = document.getElementById('form-success');
   if (contactForm && formSuccess) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      // PLACEHOLDER: Replace with real form submission (e.g., Formspree, Netlify Forms, or custom backend)
-      // For now, just show the success message
-      contactForm.style.display = 'none';
-      formSuccess.classList.add('visible');
+      
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+
+      try {
+        const formData = new FormData(contactForm);
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        const data = await response.json();
+        
+        if (response.status === 200) {
+          contactForm.style.display = 'none';
+          formSuccess.classList.add('visible');
+        } else {
+          console.error('Error submitting form:', data);
+          alert('There was an issue sending your message. Please try again.');
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
+      } catch (error) {
+        console.error('Network error:', error);
+        alert('There was a network error. Please check your connection and try again.');
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
     });
   }
 
